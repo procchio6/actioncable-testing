@@ -7,5 +7,9 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: actioncable-test_production
+  url: redis://h:pca2cffc630e5b999739e9f6d63790a51fa3e46e563410cc1a78c41af6df23226@ec2-52-72-98-112.compute-1.amazonaws.com:31289
+  :host: ec2-52-72-98-112.compute-1.amazonaws.com
+  :port: 31289
+  :password: pca2cffc630e5b999739e9f6d63790a51fa3e46e563410cc1a78c41af6df23226
+  :inline: true
+  :timeout: 1
