@@ -3,7 +3,11 @@ class WebNotificationsChannel < ApplicationCable::Channel
     stream_from "web_notifications_channel"
   end
 
+  def receive(data)
+    ActionCable.server.broadcast("web_notifications_channel", data)
+  end
+
   def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
+    ActionCable.server.broadcast("web_notifications_channel", {message: 'Someone left!'})
   end
 end
