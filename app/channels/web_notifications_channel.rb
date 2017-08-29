@@ -8,6 +8,6 @@ class WebNotificationsChannel < ApplicationCable::Channel
   end
 
   def unsubscribed
-    ActionCable.server.broadcast("web_notifications_channel", {message: 'Someone left!'})
+    ActionCable.server.broadcast("web_notifications_channel", {message: '<p>Someone left!</p>'})
   end
 end
