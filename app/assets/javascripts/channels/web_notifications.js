@@ -9,7 +9,7 @@ App.web_notifications = App.cable.subscriptions.create(
     },
 
     disconnected: function () {
-
+      alert('Lost connection!')
     },
 
     received: function (data) {
